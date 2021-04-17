@@ -33,7 +33,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ### Site Image
-![Password Generator Screenshot](.\assets\images\Screenshot.JPG)
+![Password Generator Screenshot](./assets/images/Screenshot.JPG)
 
 ### Link to Live Page
 https://ortizalex.github.io/AO-Homework03-PasswordGenerator/
