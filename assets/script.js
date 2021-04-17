@@ -1,3 +1,5 @@
+var password = document.querySelector("textarea");
+
 //Arrays of all possible password characters
 
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -63,6 +65,7 @@ function randomCharacter(a) {
   var e = a[i];
   return e;
 }
+
 //Uses criteria and randomize functions to generate password
 function generatePassword(){
   //Array for final password characters to be stored
@@ -110,10 +113,20 @@ function generatePassword(){
   for(var i = 0; i < mustHaveCriteriaCharacters.length; i++)
     finalPassword[i] = mustHaveCriteriaCharacters[i];
 
+  //Alerts that the password was created
+  alert("Here is your secure password based on your selected criteria. Click on the password to copy it to your clipboard.");
+  
   //Returns finalPasssord as joined array
   return finalPassword.join('');
     
 }
+
+//If the texxbox is clicked, copy the password to clipboard
+password.addEventListener("click", function(){
+  password.select();
+  document.execCommand('copy');
+  alert("Your password was copied to the clipboard")
+});
 
 // Given Assignment Code
 var generateBtn = document.querySelector("#generate");
